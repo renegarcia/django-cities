@@ -6,7 +6,7 @@ from collections import defaultdict
 import django
 from django.conf import settings as django_settings
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 __all__ = [
     'city_types', 'district_types',
@@ -232,7 +232,7 @@ _CURRENCY_SYMBOLS = {
 
 _NO_LONGER_EXISTENT_COUNTRY_CODES = ['CS', 'AN']
 
-_SLUGIFY_FUNCTION = getattr(django_settings, 'CITIES_SLUGIFY_FUNCTION', 'cities.util.default_slugify')
+_SLUGIFY_FUNCTION = getattr(django_settings, 'CITIES_SLUGIFY_FUNCTION', 'honey.apps.django_cities.cities.util.default_slugify')
 
 # See http://www.geonames.org/export/codes.html
 city_types = ['PPL', 'PPLA', 'PPLC', 'PPLA2', 'PPLA3', 'PPLA4', 'PPLG']
